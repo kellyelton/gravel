@@ -1,0 +1,380 @@
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+a, .btn-link {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-row {
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    flex: 1;
+}
+
+    .main .top-row {
+        background-color: #f7f7f7;
+        border-bottom: 1px solid #d6d5d5;
+        justify-content: flex-end;
+    }
+
+        .main .top-row > a, .main .top-row .btn-link {
+            white-space: nowrap;
+            margin-left: 1.5rem;
+        }
+
+        .main .top-row a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+.sidebar {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+    .sidebar .top-row {
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .sidebar .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .sidebar .oi {
+        width: 2rem;
+        font-size: 1.1rem;
+        vertical-align: text-top;
+        top: -2px;
+    }
+
+    .sidebar .nav-item {
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+    }
+
+        .sidebar .nav-item:first-of-type {
+            padding-top: 1rem;
+        }
+
+        .sidebar .nav-item:last-of-type {
+            padding-bottom: 1rem;
+        }
+
+        .sidebar .nav-item a {
+            color: #d7d7d7;
+            border-radius: 4px;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            line-height: 3rem;
+        }
+
+            .sidebar .nav-item a.active {
+                background-color: rgba(255,255,255,0.25);
+                color: white;
+            }
+
+            .sidebar .nav-item a:hover {
+                background-color: rgba(255,255,255,0.1);
+                color: white;
+            }
+
+.content {
+    padding-top: 1.1rem;
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid red;
+}
+
+.validation-message {
+    color: red;
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+#grav-designer {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+#grav-designer-menu {
+    margin: auto;
+    width: 220px;
+    padding: 10px;
+    height: 74px;
+    top: 0px;
+    border: 1px solid rgb(5, 39, 103);
+    border-radius: 0px 0px 5px 5px;
+    background: #111E;
+    box-shadow: 0 1px 12px #4b7a8d;
+}
+
+    #grav-designer-menu ul {
+        display: block;
+        width:176px;
+        margin: auto;
+        padding: 0px;
+    }
+
+        #grav-designer-menu ul > li{
+            display: inline-block;
+        }
+
+        #grav-designer-menu ul > li:not(:last-child) {
+            margin-right: 10px;
+        }
+
+            #grav-designer-menu ul > li > button {
+                transition: all 0.2s ease;
+                height: 30px;
+                background: transparent;
+                display: block;
+                border: 0.5px solid rgb(5, 39, 103);
+                border-radius: 2px;
+            }
+
+                #grav-designer-menu ul > li > button :hover {
+                    border: 0.8px solid #1861ac;
+                    background-color: rgb(5, 39, 103);
+                }
+
+#grav-sitemap {
+    position: absolute;
+    left: 0px;
+    width: 280px;
+    padding: 10px;
+    height: 650px;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    border: 1px solid rgb(5, 39, 103);
+    border-radius: 0px 5px 5px 0px;
+    background: #111E;
+    box-shadow: 0 1px 12px #4b7a8d;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+@media (max-width: 767.98px) {
+    .main .top-row:not(.auth) {
+        display: none;
+    }
+
+    .main .top-row.auth {
+        justify-content: space-between;
+    }
+
+    .main .top-row a, .main .top-row .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    app {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .main .top-row {
+        position: sticky;
+        top: 0;
+    }
+
+    .main > div {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+
+    .sidebar .collapse {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
+
+.toggle {
+    box-sizing: border-box;
+    width: 80px;
+    height: 62px;
+}
+
+    .toggle .toggle-border {
+        width: 100%;
+        height: 32px;
+        border: 2px solid #444249;
+        border-radius: 20px;
+        -webkit-transition: border-color .6s ease-out;
+        transition: border-color .6s ease-out;
+    }
+
+    .toggle.toggle-on {
+        border-color: rgba(137, 194, 217, .4);
+        -webkit-transition: all .5s .15s ease-out;
+        transition: all .5s .15s ease-out;
+    }
+
+.toggle-button {
+    position: relative;
+    top: -54px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    background-color: #444249;
+    border-radius: 19px;
+    cursor: pointer;
+    -webkit-transition: all .3s .1s, width .1s, top .1s, bottom .1s;
+    transition: all .3s .1s, width .1s, top .1s, bottom .1s;
+}
+
+.toggle-on .toggle-button {
+    position: relative;
+    width: 72px;
+    left: 2px;
+    height: 24px;
+    top: -54px;
+    border-radius: 23px;
+    background-color: #89c2da;
+    box-shadow: 0 0 12px #4b7a8d;
+    -webkit-transition: all .2s .1s, right .1s;
+    transition: all .2s .1s, right .1s;
+}
+
+
+.toggle-text-on {
+    position: relative;
+    top: -83px;
+    line-height: 36px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    cursor: pointer;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    color: rgba(0,0,0,0);
+}
+
+.toggle-on .toggle-text-on {
+    color: #3b6a7d;
+    -webkit-transition: color .3s .15s;
+    transition: color .3s .15s;
+}
+
+.toggle-text-off {
+    position: relative;
+    top: -3px;
+    right: -12px;
+    line-height: 36px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    cursor: pointer;
+    color: #444249;
+}
+
+.toggle-on .toggle-text-off {
+    color: rgba(0,0,0,0);
+}
+
+/* used for streak effect */
+.glow-comp {
+    position: relative;
+    opacity: 0;
+    top: -20px;
+    height: 20px;
+    border-radius: 6px;
+    background-color: rgba(75, 122, 141, .15);
+    box-shadow: 0 0 12px rgba(75, 122, 141, .2);
+    -webkit-transition: opacity 4.5s 1s;
+    transition: opacity 4.5s 1s;
+}
+
+.toggle-on .glow-comp {
+    opacity: 1;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.toggle-text-details {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444249;
+    /*position: absolute;*/
+    bottom: 0px;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.toggle-on .toggle-text-details {
+    color: #3b6a7d;
+    -webkit-transition: color .3s .15s;
+    transition: color .3s .15s;
+}

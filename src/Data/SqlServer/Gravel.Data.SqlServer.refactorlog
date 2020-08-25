@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="4d3b68f5-e544-470a-861e-7690e2b9aef4" ChangeDateTime="08/19/2020 00:13:24">
+    <Property Name="ElementName" Value="[dbo].[Pages].[Paths]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Pages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Contents" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5a6ddade-7bbc-44ae-ad86-a5f6e7c50386" ChangeDateTime="08/19/2020 00:18:15">
+    <Property Name="ElementName" Value="[dbo].[Pages].[Contents]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Pages]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Version" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="38c9af03-336b-4422-aebe-923268977307" ChangeDateTime="08/19/2020 00:21:59">
+    <Property Name="ElementName" Value="[dbo].[PageVersions].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PageVersions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Path" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="a4ff3bdd-5d8b-41e6-8c83-bbfa9896dadb" ChangeDateTime="08/19/2020 00:29:04">
+    <Property Name="ElementName" Value="[dbo].[PageVersions].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PageVersions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Path" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="4e7700b6-46e6-4840-9ec4-4c8a04f7480d" ChangeDateTime="08/19/2020 00:37:49">
+    <Property Name="ElementName" Value="[dbo].[PageVersions].[DateCreated]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PageVersions]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreatedDate" />
+  </Operation>
+</Operations>
